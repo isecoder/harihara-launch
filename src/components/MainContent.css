@@ -1,0 +1,83 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.main-content {
+  display: flex; /* Enable Flexbox */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center children vertically */
+  align-items: center; /* Center children horizontally */
+  text-align: center;
+  padding: 100px 20px;
+  min-height: calc(100vh - 140px); /* Subtract height of header and footer */
+  background-color: rgba(224, 224, 224, 0.705);
+}
+
+.main-content h2,
+.main-content p {
+  font-family: 'Roboto', sans-serif; /* Apply the modern font */
+  font-size: 2.5vw; /* Further reduced responsive font size */
+  margin-bottom: 20px;
+  color: transparent; /* Make text transparent for gradient effect */
+  background: linear-gradient(135deg, #FFA500, #FF4500, #FF6347); /* Orange gradient */
+  background-clip: text; /* Clip the background to the text */
+  -webkit-background-clip: text; /* For Safari */
+  animation: gradient-animation 3s ease infinite; /* Animation for the gradient */
+}
+
+/* Specific styles for "Launching Soon" */
+.launching-soon {
+  font-size: 5vw; /* Moderate font size */
+  font-weight: 600; /* Slightly bold font weight */
+  color: #FFA500; /* Solid orange color for the text */
+  text-transform: uppercase; /* Make text uppercase for emphasis */
+  letter-spacing: 2px; /* Increase letter spacing for better readability */
+  animation: fade-in 1s ease; /* Simple fade-in animation */
+}
+
+/* Keyframes for the fade-in animation */
+@keyframes fade-in {
+  0% {
+    opacity: 0; /* Start invisible */
+  }
+  100% {
+    opacity: 1; /* End fully visible */
+  }
+}
+
+/* Keyframes for the gradient animation */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Keyframes for the pulsing effect */
+@keyframes pulse-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 80px 10px; /* Adjust padding for smaller screens */
+  }
+
+  .main-content h2,
+  .main-content p {
+    font-size: 4vw; /* Slightly larger font size for smaller screens */
+  }
+
+  .launching-soon {
+    font-size: 6vw; /* Adjust font size for smaller screens */
+  }
+}
